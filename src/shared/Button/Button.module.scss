@@ -1,0 +1,37 @@
+
+//.button {
+//	position: relative;
+//	display: inline-flex;
+//	align-items: center;
+//	justify-content: center;
+//	min-width: auto;
+//	height: rem(42px);
+//	padding: rems(14px 16px);
+//	background: $color__background-light;
+//	white-space: nowrap;
+//	border: 1px solid transparent;
+//	transition: color .45s,
+//	background .6s,
+//	border .6s;
+//	overflow: hidden;
+//	cursor: pointer;
+//
+//	span {
+//		font-weight: 700;
+//		font-size: rem(12px);
+//		color: $color__text-dark;
+//	}
+//
+//	&:focus-visible {
+//		outline: none;
+//		box-shadow: none;
+//		color: inherit;
+//	}
+//
+//	&[disabled],
+//	&.is-disabled {
+//		opacity: 0.65;
+//		pointer-events: none;
+//		cursor: default;
+//	}
+//}

@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html, body {
+        @apply sw-max-w-screen sw-min-h-screen sw-overscroll-none
+    }
+
+    body {
+        @apply sw-text-base sw-text-white sw-bg-black sw-scroll-smooth sw-antialiased
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
