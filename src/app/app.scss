@@ -8,7 +8,11 @@
     }
 
     body {
-        @apply sw-text-base sw-text-white sw-bg-black sw-scroll-smooth sw-antialiased
+        @apply sw-font-body sw-font-normal sw-text-base sw-text-white sw-bg-black sw-scroll-smooth sw-antialiased
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply sw-font-heading sw-font-bold
     }
 }
 

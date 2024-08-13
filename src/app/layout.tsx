@@ -1,17 +1,25 @@
 import './app.scss'
 
 import type { Metadata } from 'next'
-import { Mulish } from 'next/font/google'
+import { Manrope, Mulish } from 'next/font/google'
 import { ReactNode } from 'react'
 
 import { LayoutDefault } from '@/layouts/LayoutDefault'
 import { ApolloWrapper } from '@/utils/apollo-wrapper'
 
 const mulish = Mulish({
-    weight: ['400', '500', '600'],
+    weight: ['700'],
     style: ['normal'],
     subsets: ['latin'],
     variable: '--font-mulish',
+    display: 'swap',
+})
+
+const manrope = Manrope({
+    weight: ['400', '600', '800'],
+    style: ['normal'],
+    subsets: ['latin'],
+    variable: '--font-manrope',
     display: 'swap',
 })
 
@@ -27,7 +35,7 @@ const RootLayout = ({
     children: ReactNode
 }>) => {
     return (
-        <html lang="en" className={mulish.variable}>
+        <html lang="en" className={`${manrope.variable} ${mulish.variable} `}>
             <body>
                 <ApolloWrapper>
                     <LayoutDefault>{children}</LayoutDefault>
