@@ -9,22 +9,19 @@ import {
 } from '@apollo/experimental-nextjs-app-support'
 import { PropsWithChildren } from 'react'
 
-import { getSwapiUrl } from '@/utils/api'
+import { getSwapiUrl } from '@/lib/api'
+import { ErrorLink } from '@/lib/apollo-error'
 
 function makeClient() {
     const httpLink = getSwapiUrl({ fetchOptions: { cache: 'no-store' } })
+    const ssrLink =
+        typeof window === 'undefined'
+            ? [new SSRMultipartLink({ stripDefer: true }), ErrorLink, httpLink]
+            : [ErrorLink, httpLink]
 
     return new ApolloClient({
         cache: new InMemoryCache(),
-        link:
-            typeof window === 'undefined'
-                ? ApolloLink.from([
-                      new SSRMultipartLink({
-                          stripDefer: true,
-                      }),
-                      httpLink,
-                  ])
-                : httpLink,
+        link: ApolloLink.from(ssrLink),
     })
 }
 

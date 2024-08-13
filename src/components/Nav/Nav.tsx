@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
-import { links } from '@/utils/routes'
+import { links } from '@/lib/routes'
 
-export const Nav = () => {
+const Nav = () => {
     return (
         <nav className="sw-flex sw-justify-end">
             <ul>
@@ -20,3 +20,5 @@ export const Nav = () => {
         </nav>
     )
 }
+
+export default Nav

@@ -1,8 +1,6 @@
-import { Box } from '@/shared/Box/Box'
-import { Section } from '@/shared/Section/Section'
-import { Wrapper } from '@/shared/Wrapper/Wrapper'
+import { Box, Section, Wrapper } from '@/shared'
 
-export const Intro = () => (
+const Intro = () => (
     <Section className="sw-flex sw-items-center sw-h-screen">
         <Box className="sw-absolute sw-top-0 sw-left-0 sw-w-full sw-h-full sw-bg-intro sw-bg-cover sw-bg-center"></Box>
         <Wrapper>
@@ -21,3 +19,5 @@ export const Intro = () => (
         </Wrapper>
     </Section>
 )
+
+export default Intro

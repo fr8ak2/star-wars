@@ -1,4 +1,6 @@
 export * from './Box/Box'
 export * from './Button/Button'
+export * from './Error/Error'
+export * from './Loading/Loading'
 export * from './Section/Section'
 export * from './Wrapper/Wrapper'

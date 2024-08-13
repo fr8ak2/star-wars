@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react'
 
-import { Header, PageFlow } from '@/layouts/layouts'
-import { Box } from '@/shared/Box/Box'
+import { Header, PageFlow } from '@/layouts'
+import { Box } from '@/shared'
 
 export interface LayoutProps {
     children: ReactNode

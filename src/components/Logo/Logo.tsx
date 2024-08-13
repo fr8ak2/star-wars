@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
-import { Box } from '@/shared/shared'
+import { Box } from '@/shared'
 
-export const Logo = () => (
+const Logo = () => (
     <Box className="sw-w-40 sw-h-auto">
         <Link href="/">
             <svg
@@ -21,3 +21,5 @@ export const Logo = () => (
         </Link>
     </Box>
 )
+
+export default Logo

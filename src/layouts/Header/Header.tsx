@@ -1,8 +1,8 @@
 import { FC, PropsWithChildren } from 'react'
 
-import { Logo } from '@/components/Logo/Logo'
-import { Nav } from '@/components/Nav/Nav'
-import { Box, Wrapper } from '@/shared/shared'
+import Logo from '@/components/Logo/Logo'
+import Nav from '@/components/Nav/Nav'
+import { Box, Wrapper } from '@/shared'
 
 export const Header = () => {
     return (
