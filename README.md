@@ -17,7 +17,7 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Project could be improved by adding monorepo with Turborepo, in that fact, we could use yarn workspaces, 
+Project could be improved by adding monorepo with Turborepo to get incremental build, in that fact, we could use yarn workspaces, 
 to set up multiple packages, in a way to run only once "yarn install"
 also we can use Redux or Mobx to state large amount of data, so it could be updated in proper way.
 
