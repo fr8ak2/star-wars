@@ -3,7 +3,7 @@
 import { useSuspenseQuery } from '@apollo/client'
 import { FC, Suspense } from 'react'
 
-import CharactersDetail from '@/components/Characters/Details/CharactersDetail'
+import CharactersDetails from '@/components/Characters/Details/CharactersDetails'
 import { GET_CHARACTER_DETAILS } from '@/graphql/queries'
 import { Loading } from '@/shared'
 import { CharacterDetailData } from '@/types/сharacters'
@@ -28,7 +28,7 @@ const CharacterPage: FC<CharacterDetailProps> = ({
 
     return (
         <Suspense fallback={<Loading />}>
-            <CharactersDetail data={data} />
+            <CharactersDetails details={data} />
         </Suspense>
     )
 }

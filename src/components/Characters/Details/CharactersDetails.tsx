@@ -1,19 +1,20 @@
 import { FC, useEffect, useState } from 'react'
 
-import CharactersDetailList from '@/components/Characters/Details/List/CharactersDetailList'
 import { Box, Loading, Section, Wrapper } from '@/shared'
 import { CharacterDetailData } from '@/types/сharacters'
 
-interface CharacterPageProps {
-    data: CharacterDetailData
+import CharactersDetailList from '../Details/List/CharactersDetailsList'
+
+interface CharacterDetailsProps {
+    details: CharacterDetailData
 }
 
-const CharacterPage: FC<CharacterPageProps> = ({ data }) => {
+const CharactersDetails: FC<CharacterDetailsProps> = ({ details }) => {
     const [character, setCharacter] = useState<CharacterDetailData | null>(null)
 
     useEffect(() => {
-        setCharacter({ person: data?.person })
-    }, [data.person])
+        setCharacter({ person: details?.person })
+    }, [details.person])
 
     if (!character) {
         return <Loading className="sw-py-40 sw-text-center" />
@@ -98,4 +99,4 @@ const CharacterPage: FC<CharacterPageProps> = ({ data }) => {
     )
 }
 
-export default CharacterPage
+export default CharactersDetails

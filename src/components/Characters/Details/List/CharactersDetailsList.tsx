@@ -2,16 +2,16 @@ import { FC } from 'react'
 
 import { Box } from '@/shared'
 
-interface CharactersDetailProps {
+interface CharactersDetailListProps {
     title?: string
     list: { label: string; value: string | number | undefined }[]
 }
 
-interface CharactersDetailsProps {
-    details: CharactersDetailProps[]
+interface CharactersDetailsListProps {
+    details: CharactersDetailListProps[]
 }
 
-const charactersDetailList: FC<CharactersDetailsProps> = ({ details }) => {
+const charactersDetailsList: FC<CharactersDetailsListProps> = ({ details }) => {
     return (
         <>
             {details?.map((detail) => (
@@ -24,16 +24,16 @@ const charactersDetailList: FC<CharactersDetailsProps> = ({ details }) => {
                     </h2>
 
                     <Box className="sw-flex sw-flex-col sw-gap-4">
-                        {detail?.list.map((detail) => (
+                        {detail?.list.map((item) => (
                             <Box
                                 className="sw-flex sw-items-center sw-gap-3"
-                                key={`character-details-${detail.label}`}
+                                key={`character-details-${item.label}`}
                             >
                                 <span className="sw-text-xs sw-font-extrabold sw-w-52 sw-tracking-widest sw-uppercase">
-                                    {detail.label}:
+                                    {item.label}:
                                 </span>
                                 <span className="sw-flex sw-items-center sw-justify-center sw-text-sm sw-w-full sw-min-h-8 sw-py-1.5 sw-px-5 sw-bg-amber-400 sw-text-black sw-text-center">
-                                    {detail.value}
+                                    {item.value}
                                 </span>
                             </Box>
                         ))}
@@ -44,4 +44,4 @@ const charactersDetailList: FC<CharactersDetailsProps> = ({ details }) => {
     )
 }
 
-export default charactersDetailList
+export default charactersDetailsList
