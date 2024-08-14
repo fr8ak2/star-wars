@@ -16,13 +16,15 @@ export const useCharacters = () => {
 
     useEffect(() => {
         if (data) {
-            setCharacters(data.allPeople.people)
-            setLoading(false)
+            setTimeout(() => {
+                setCharacters(data.allPeople.people)
+                setLoading(false)
+            }, 1200)
         }
-    }, [data])
+    }, [data, loading])
 
     useEffect(() => {
-        if (queryError && !loading) {
+        if (queryError && loading) {
             setError(`Failed to fetch characters: ${queryError.message}`)
         }
     }, [data, loading, queryError])

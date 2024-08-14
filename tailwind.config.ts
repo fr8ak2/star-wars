@@ -15,6 +15,8 @@ const config: Config = {
             },
             backgroundImage: {
                 intro: 'url(/img/intro.jpg)',
+                select: 'url(/img/select.svg)',
+                search: 'url(/icons/search.svg)',
             },
         },
     },
