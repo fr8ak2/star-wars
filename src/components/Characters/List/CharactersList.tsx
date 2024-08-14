@@ -57,7 +57,7 @@ const CharacterList: FC<CharactersListProps> = ({
 
                         {emptySearch && (
                             <span>
-                                No result for <strong>{search}</strong>.
+                                No result found for <strong>{search}</strong>.
                             </span>
                         )}
 
