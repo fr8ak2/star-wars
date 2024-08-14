@@ -13,7 +13,7 @@ import { getSwapiUrl } from '@/lib/api'
 import { ErrorLink } from '@/lib/apollo-error'
 
 function makeClient() {
-    const httpLink = getSwapiUrl({ fetchOptions: { cache: 'no-store' } })
+    const httpLink = getSwapiUrl()
     const ssrLink =
         typeof window === 'undefined'
             ? [new SSRMultipartLink({ stripDefer: true }), ErrorLink, httpLink]

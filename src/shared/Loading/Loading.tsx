@@ -1,1 +1,3 @@
-export const Loading = () => <div>Loading...</div>
+export const Loading = ({ className }: { className?: string }) => (
+    <div className={className}>Loading...</div>
+)

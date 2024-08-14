@@ -17,6 +17,11 @@ const config: Config = {
                 intro: 'url(/img/intro.jpg)',
                 select: 'url(/img/select.svg)',
                 search: 'url(/icons/search.svg)',
+                'gradient-63':
+                    'linear-gradient(63deg, var(--tw-gradient-stops))',
+            },
+            gradientColorStops: {
+                '33%': '33%',
             },
         },
     },

@@ -21,7 +21,7 @@ const CharacterList: FC<CharactersListProps> = ({
 }) => {
     const [search, setSearch] = useState<string>('')
     const [emptySearch, setEmptySearch] = useState<boolean>(false)
-    const [sort, setSort] = useState<string>('')
+    const [sort, setSort] = useState<string | undefined>(undefined)
 
     const sorted = sortList(characters, sort as Sort, search)
 
@@ -43,7 +43,7 @@ const CharacterList: FC<CharactersListProps> = ({
                     </Box>
                 )}
 
-                {sorted && !loading && (
+                {sorted && !loading && !error && (
                     <>
                         <Box className="sw-flex sw-items-center sw-justify-between sw-gap-x-8 sw-gap-y-4 sw-mb-12">
                             <Search
@@ -55,22 +55,20 @@ const CharacterList: FC<CharactersListProps> = ({
                             <Sorting value={sort} onSort={setSort} />
                         </Box>
 
-                        <Box>
-                            {emptySearch && (
-                                <Box>
-                                    No result for <strong>{search}</strong>.
-                                </Box>
-                            )}
+                        {emptySearch && (
+                            <span>
+                                No result for <strong>{search}</strong>.
+                            </span>
+                        )}
 
-                            <ul>
-                                {sorted?.map((character) => (
-                                    <CharacterCard
-                                        key={character.id}
-                                        character={character}
-                                    />
-                                ))}
-                            </ul>
-                        </Box>
+                        <ul className="sw-grid sw-grid-cols-3 sw-gap-7">
+                            {sorted?.map((character) => (
+                                <CharacterCard
+                                    key={character.id}
+                                    character={character}
+                                />
+                            ))}
+                        </ul>
                     </>
                 )}
             </Wrapper>

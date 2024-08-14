@@ -8,7 +8,7 @@ import { LayoutDefault } from '@/layouts/LayoutDefault'
 import { ApolloWrapper } from '@/lib/apollo-wrapper'
 
 const mulish = Mulish({
-    weight: ['700'],
+    weight: ['500', '700'],
     style: ['normal'],
     subsets: ['latin'],
     variable: '--font-mulish',

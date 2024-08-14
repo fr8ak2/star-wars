@@ -20,9 +20,16 @@ export const GET_CHARACTER_DETAILS = gql`
             gender
             height
             mass
+            eyeColor
+            skinColor
             homeworld {
                 id
                 name
+                diameter
+                orbitalPeriod
+                population
+                terrains
+                climates
             }
             species {
                 id

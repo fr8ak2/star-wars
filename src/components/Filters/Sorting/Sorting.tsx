@@ -15,6 +15,7 @@ const Sorting: FC<SortProps> = ({ value, onSort }) => {
                 value={value}
                 onChange={(e) => onSort(e.target.value)}
             >
+                <option value={undefined}>Sort by:</option>
                 <option value="asc">Ascending</option>
                 <option value="desc">Descending</option>
             </select>

@@ -3,7 +3,22 @@ export interface Character {
     name: string
 }
 
-export interface Film {
+interface Species {
+    id: string
+    name: string
+}
+
+interface HomeWorld {
+    id: string
+    name: string
+    diameter: string
+    orbitalPeriod: number
+    population: number
+    terrains: string[]
+    climates: string[]
+}
+
+interface Film {
     id: string
     title: string
     releaseDate: string
@@ -13,10 +28,12 @@ export interface CharacterDetailData {
     person: Character & {
         birthYear: string
         gender: string
-        height: string
+        height: number
         mass: string
-        homeworld: Character
-        species: Character | null
+        eyeColor: string
+        skinColor: string
+        homeworld: HomeWorld
+        species: Species | null
         filmConnection: {
             films: Film[]
         }
