@@ -17,6 +17,9 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+App uses RSC with SSR, it has two apollo providers, for client and for the server. So we can use them by situation, 
+if we need data on server - use apollo-client, for the client component, like in our situation, we are using apollo-wrapper.
+
 Project could be improved by adding monorepo with Turborepo to get incremental build, in that fact, we could use yarn workspaces, 
 to set up multiple packages, in a way to run only once "yarn install"
 also we can use Redux or Mobx to state large amount of data, so it could be updated in proper way.
