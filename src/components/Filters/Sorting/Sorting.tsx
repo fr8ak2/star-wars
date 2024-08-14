@@ -11,7 +11,7 @@ const Sorting: FC<SortProps> = ({ value, onSort }) => {
     return (
         <Box className="sw-flex">
             <select
-                className="sw-text-sm sw-w-48 sw-h-12 sw-py-2 sw-bg-transparent sw-border-b sw-border-amber-400 sw-cursor-pointer"
+                className="sw-text-sm sw-w-full md:sw-w-48 sw-h-12 sw-py-2 sw-bg-transparent sw-border-b sw-border-amber-400 sw-cursor-pointer"
                 value={value}
                 onChange={(e) => onSort(e.target.value)}
             >

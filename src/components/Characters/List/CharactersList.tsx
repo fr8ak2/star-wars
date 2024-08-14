@@ -37,7 +37,7 @@ const CharacterList: FC<CharactersListProps> = ({
                 </h1>
 
                 {(loading || error) && (
-                    <Box className="sw-flex sw-items-center sw-justify-center sw-h-full sw-py-32 sw-text-center">
+                    <Box className="sw-flex sw-items-center sw-justify-center sw-flex-col md:sw-flex-row sw-h-full sw-py-32 sw-text-center">
                         {loading && <Loading />}
                         {error && <Error error={error} />}
                     </Box>
@@ -45,7 +45,7 @@ const CharacterList: FC<CharactersListProps> = ({
 
                 {sorted && !loading && !error && (
                     <>
-                        <Box className="sw-flex sw-items-center sw-justify-between sw-gap-x-8 sw-gap-y-4 sw-mb-12">
+                        <Box className="sw-flex sw-flex-col md:sw-flex-row md:sw-items-center md:sw-justify-between sw-gap-x-8 sw-gap-y-4 sw-mb-12">
                             <Search
                                 value={search}
                                 onSearch={setSearch}
@@ -61,7 +61,7 @@ const CharacterList: FC<CharactersListProps> = ({
                             </span>
                         )}
 
-                        <ul className="sw-grid sw-grid-cols-3 sw-gap-7">
+                        <ul className="sw-grid sw-grid-cols-1 sm:sw-grid-cols-2 lg:sw-grid-cols-3 sw-gap-7">
                             {sorted?.map((character) => (
                                 <CharacterCard
                                     key={character.id}

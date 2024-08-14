@@ -13,7 +13,7 @@ const CharacterCard: FC<CharacterCardProps> = ({ character }) => {
             className="
             sw-relative
             sw-w-full
-            sw-h-[12.5rem]
+            sw-min-h-[12.5rem]
             sw-bg-white/20
             sw-border
             sw-border-white/80
@@ -30,7 +30,7 @@ const CharacterCard: FC<CharacterCardProps> = ({ character }) => {
             sw-ease-out"
         >
             <Link
-                className="sw-absolute sw-top-0 sw-left-0 sw-flex sw-flex-col sw-justify-center sw-p-6 sw-w-full sw-h-full sw-bg-gradient-63 sw-from-[rgb(0_0_0/.5)_33%] sw-to-[rgb(0_0_0/.8)_100%]"
+                className="sw-flex sw-flex-col sw-justify-center sw-p-6 sw-w-full sw-h-full sw-bg-gradient-63 sw-from-[rgb(0_0_0/.5)_33%] sw-to-[rgb(0_0_0/.8)_100%]"
                 href={`/characters/${character.id}`}
             >
                 <h2 className="font-semibold text-2xl sw-mb-2.5">
