@@ -7,7 +7,7 @@ First, run the development server:
 ```bash
 npm run dev
 # or
-Project uses Yarn 4, corepack should be enabled, after in terminal yarn set version stable, 
+Project uses Yarn 4, corepack should be enabled, after in terminal yarn version should be setted, 
 like so - yarn set verstion stable and after - yarn run dev
 # or
 pnpm dev
